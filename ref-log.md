@@ -1,1 +1,5 @@
+Building this multi-agent travel planner was actually pretty fun. At the beginning, I didn’t expect the two-agent setup to feel so different from a single model call, but once I wrote clear prompts for the Planner and Reviewer, they really started to act like two personalities working together. The Planner focused on structure and pacing, while the Reviewer acted like a fact-checker, fixing unrealistic travel times or adding details after searching online.
 
+The hardest part was designing the instructions so they don’t overlap too much. I had to remind the Planner not to search the web, and the Reviewer not to rewrite the whole plan, just to comment and fix. Getting the output format right also took some tweaking — Markdown tables looked good, but sometimes the model ignored spacing, so I had to give it very explicit formatting cues.
+
+Once everything connected, it was cool to watch how the Reviewer used the internet search tool automatically and produced a “Delta List.” It really felt like a small version of a collaborative system, where one agent creates and another improves.
